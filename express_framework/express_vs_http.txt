@@ -1,0 +1,16 @@
+Express vs. http
+If you write serious apps using only core Node.js modules (refer to the previous snippet for an example), you most likely find yourself reinventing the wheel by writing the same code continually for similar tasks, such as the following:
+
+Parsing of HTTP request bodies
+Parsing of cookies
+Managing sessions
+Organizing routes with a chain of if conditions based on URL paths and HTTP methods of the requests
+Determining proper response headers based on data types
+URL params and query strings parsing
+Automatic response headers
+Routes and better code organization
+Myriads of plugins (called middleware)
+Request body parsing (with a module)
+Authentication, validation, session and more! (with modules)
+With Express you can develop APIs much faster!
+
