@@ -11,13 +11,19 @@ let profile = [{
     url: 'batman.co'
 }]
 
-app.get('/profile', (req, res)=> {
+app.get('/profile', (req, res) => {
     if (req.query.id) return res.send(profile[req.query.id])
     res.send(profile)
 })
 
 app.post('/profile', (req, res) => {
-    profile.push(req.body)
+    // validation
+    if (!req.body.first_name || !req.body.last_name) return res.sendStatus(400)
+    let obj = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name
+    }
+    profile.push(obj)
     console.log('created', profile)
     res.sendStatus(201)
 })
